@@ -29,8 +29,8 @@ class _ThreePageState extends State<ThreePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Material(
+      child: Center(
         child: Column(
           children: [
             Text(
@@ -44,7 +44,8 @@ class _ThreePageState extends State<ThreePage> {
             ElevatedButton(
                 onPressed: () {
                   var model = registerModel.copyWith(site: siteEC.text);
-                  print(model);
+                  var modelMap = model.toMap();
+                  print(modelMap);
                 },
                 child: const Text('Cadastrar')),
           ],

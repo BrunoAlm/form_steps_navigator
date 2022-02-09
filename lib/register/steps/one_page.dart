@@ -19,8 +19,8 @@ class _OnePageState extends State<OnePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Material(
+      child: Center(
         child: Column(
           children: [
             Text(

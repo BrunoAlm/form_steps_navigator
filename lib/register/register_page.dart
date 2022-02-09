@@ -19,7 +19,7 @@ class _RegisterPageState extends State<RegisterPage> {
       onWillPop: () async {
         var canPopNavRegister = navKey.currentState?.canPop() ?? false;
         if (canPopNavRegister) {
-          navKey.currentState?.canPop();
+          navKey.currentState?.pop();
           return false;
         } else {
           return true;
@@ -34,7 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
           initialRoute: '/one',
           onGenerateRoute: (settings) {
             var route = settings.name;
-            Widget? page;
+            Widget page = const OnePage();
             switch (route) {
               case '/one':
                 page = const OnePage();
@@ -49,7 +49,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 null;
             }
             return MaterialPageRoute(
-                builder: (context) => page!, settings: settings);
+                builder: (context) => page, settings: settings);
           },
         ),
       ),
