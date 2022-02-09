@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lejaum.me.forms_navigator">
+    package="lejaum.me.form_steps_navigator">
    <application
-        android:label="forms_navigator"
+        android:label="form_steps_navigator"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,4 +1,4 @@
-package lejaum.me.forms_navigator
+package lejaum.me.form_steps_navigator
 
 import io.flutter.embedding.android.FlutterActivity
 
