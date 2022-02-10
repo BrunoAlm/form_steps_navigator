@@ -62,6 +62,14 @@ class _ThreePageState extends State<ThreePage> {
                     child: const Text('Cadastrar')),
               ],
             ),
+            // const Spacer(),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context, rootNavigator: true).pushNamed('/');
+                },
+                child: const Text('Recomeçar')),
+            const SizedBox(height: 10),
           ],
         ),
       ),

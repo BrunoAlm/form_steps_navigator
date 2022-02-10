@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       routes: {
         '/': (_) => const SplashPage(),
         '/home': (_) => const HomePage(),
