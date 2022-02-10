@@ -30,24 +30,38 @@ class _ThreePageState extends State<ThreePage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
+      child: Padding(
+        padding: const EdgeInsets.all(40.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Step Three',
+              'Ta ficando doido',
               style: Theme.of(context).textTheme.headline3,
             ),
             TextFormField(
               controller: siteEC,
               decoration: const InputDecoration(labelText: 'Site'),
             ),
-            ElevatedButton(
-                onPressed: () {
-                  var model = registerModel.copyWith(site: siteEC.text);
-                  var modelMap = model.toMap();
-                  print(modelMap);
-                },
-                child: const Text('Cadastrar')),
+            const SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text('Passo Anterior')),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                    onPressed: () {
+                      var model = registerModel.copyWith(site: siteEC.text);
+                      var modelMap = model.toMap();
+                      print(modelMap);
+                    },
+                    child: const Text('Cadastrar')),
+              ],
+            ),
           ],
         ),
       ),

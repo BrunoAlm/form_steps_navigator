@@ -5,24 +5,18 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var largura = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Splash'),
-      ),
-      body: Column(
-        children: [
-          Image.network(
-            'https://scontent.fpoa1-1.fna.fbcdn.net/v/t1.6435-9/130262561_1037081930088172_5189592638196637405_n.png?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=qyDibaYw6NUAX-UVdcR&_nc_ht=scontent.fpoa1-1.fna&oh=00_AT9RjOUIXpOcz-prvSVD7OnXQ-Z76RXyfV51VZvx4Z_S2g&oe=6229EBBC',
-          ),
-          const SizedBox(height: 10),
-          ElevatedButton(
+        appBar: AppBar(
+          title: const Text('Splash'),
+        ),
+        body: Center(
+          child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/home');
+              Navigator.pushNamed(context, '/register');
             },
-            child: const Text('Home Page'),
+            child: const Text('Splash page'),
           ),
-        ],
-      ),
-    );
+        ));
   }
 }
